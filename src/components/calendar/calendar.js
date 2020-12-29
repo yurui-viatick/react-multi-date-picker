@@ -45,6 +45,7 @@ export default function Calendar({
 
             function getFormat() {
                 if (format) return format
+                if (date._format) return date._format
                 if (timePicker && !range && !multiple) return "YYYY/MM/DD HH:mm:ss"
                 if (onlyTimePicker) return "HH:mm:ss"
                 if (onlyMonthPicker) return "MM/YYYY"
